@@ -2,17 +2,25 @@
 
 @section('content')
       <!-- Page Content -->
-  <div class="container">
+<div class="container">
 
 <div class="row">
 
   <div class="col-lg-3">
 
-    <h1 class="my-4">Shop Name</h1>
+    <h1 class="my-4">Oferta Sin Barreras</h1>
     <div class="list-group">
       <a href="#" class="list-group-item">Category 1</a>
       <a href="#" class="list-group-item">Category 2</a>
       <a href="#" class="list-group-item">Category 3</a>
+    </div>
+
+    <hr>
+
+    <div class="agregar-oferta">
+      <p> 
+          <a class="btn btn-warning btn-block" href="{{ route('oferta.create') }}"> Publicar Oferta </a>
+      </p>
     </div>
 
   </div>
