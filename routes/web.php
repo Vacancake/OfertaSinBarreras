@@ -36,3 +36,7 @@ Route::get('usuario_detalles/{id}',function($id) {//Usuario detalles
 Route::get('usuario/{id}/editar', function ($id) {//Usuario editar
     return 'Aquí podremos editar el usuario: '.$id;
 })->name('usuario.edit');
+
+Route::get('wishlist', function() {
+    return view('Wishlist.wishlist');
+})->name('wishlist.show');

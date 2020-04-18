@@ -30,7 +30,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Lista de Deseos</a>
+            <a class="nav-link" href="{{ route('wishlist.show') }}">Lista de Deseos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Nombre Usuario</a>
