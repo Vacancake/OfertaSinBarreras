@@ -1,5 +1,8 @@
 <?php
 
+use App\Oferta;
+use App\Categoria;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,32 +15,50 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    $ofertas = DB::table('ofertas')->get();
-    $categorias = DB::table('categorias')->get();
+// ---------------------------RUTAS OFERTAS ---------------------------
+Route::get('/', function () {                                           //Oferta index
+    $ofertas = Oferta::all();   //$ofertas = DB::table('ofertas')->get();
+    $categorias = Categoria::all();    //$categorias = DB::table('categorias')->get();
 
     return view('Ofertas.ofertas', ['ofertas' => $ofertas, 'categorias' => $categorias]);
 })->name('oferta.index');
 
-Route::get('nueva',function() {//Oferta agregar 
-    $categorias = DB::table('categorias')->get();
 
 
+Route::get('oferta_detalles/{id}', function($id) {                      //Oferta detalles
+     $oferta = Oferta::where('id', $id)->first();
+
+    return view('Ofertas.mostrarOferta', ['ofertas' => $oferta]);
+})->name('oferta.show');
+
+Route::get('oferta/{id}/editar', function ($id) {                       //Oferta editar
+    return 'Aquí podremos editar la oferta: '.$id;
+})->name('oferta.edit');
+
+Route::get('nueva',function() {                                         //Oferta form 
+    $categorias = Categoria::all();
     return view('Ofertas.agregaOferta', ['categorias' => $categorias]);
 })->name('oferta.create');
 
-Route::get('oferta_detalles/{id}', function($id) {//Oferta detalles
-    $oferta = DB::table('ofertas')
-    ->where('id',$id)
-    ->first();
-
-    return view('Ofertas.mostrarOferta', ['oferta' => $oferta]);
-})->name('oferta.show');
-
-Route::get('oferta/{id}/editar', function ($id) {//Oferta editar
-    return 'Aquí podremos editar la oferta: '.$id;
-})->name('oferta.edit');
+Route::post('ofertas', function(Request $request) {                     //Oferta añadir
+    
+    //return $request;
+    Oferta::create([
+        'nombre' => $request->input('nombre'),
+        'fecha_inicio' => $request->input('fecha_inicio'),
+        'fecha_termino' => $request->input('fecha_termino'),
+        'precio' => $request->input('precio'),
+        'descripcion' => $request->input('descripcion'),
+        'categoria_id' => $request->input('categoria_id'),//categoria
+        'ubicacion' => $request->input('ubicacion'),
+        'referencias' => $request->input('referencias'),
+        'imagen' => $request->input('imagen'),
+        
+        ]);
+        
+    //return "Aqui vamos a agregar la oferta";
+    return redirect()->route('oferta.index');
+});
 
 Route::get('usuario_detalles/{id}',function($id) {//Usuario detalles
     return view('Usuarios.mostrarUsuario');

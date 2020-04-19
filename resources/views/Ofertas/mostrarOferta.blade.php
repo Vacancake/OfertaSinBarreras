@@ -6,7 +6,7 @@
         <div class="col-md-6">
             <div class="container">
                 <div class="bloque-oferta"> <!--IMAGEN -->
-                    <img src= {{$oferta->imagen}} width="400">
+                    <img src= {{$ofertas->imagen}} width="645">
                 </div>
             </div>
         </div>
@@ -14,10 +14,10 @@
     <div class="col-md-6">
         <div class="container">
             <div class="oferta-bloque">
-                <h3>{{$oferta->nombre}}</h3><hr>
+                <h3>{{$ofertas->nombre}}</h3><hr>
                 <div class='informacion-oferta'>
-                    <p>{{$oferta->descripcion}}</p>
-                    <p>Precio: ${{$oferta->precio}}</p>
+                    <p>{{$ofertas->descripcion}}</p>
+                    <p>Precio: ${{$ofertas->precio}}</p>
                     
                     <p>     
                         <a class="btn btn-success" href="#"> Añadir a lista de deseos </a>
@@ -39,16 +39,17 @@
                     </div>
                     <div class="card-body">
                         <h5>Inicio de Oferta</h5>
-                        <p>{{$oferta->fecha_inicio}}</p>
+                        <p>{{$ofertas->fecha_inicio}}</p>
                         <hr>
                         <h5>Termino de Oferta</h5>
-                        <p>{{$oferta->fecha_termino}}</p>
+                        <p>{{$ofertas->fecha_termino}}</p>
                         <hr>
                         <h5>Ubicacion</h5>
-                        <p>{{$oferta->ubicacion}}</p>
+                        <!-- <p>{{$ofertas->ubicacion}}</p> -->
+                        <a href="{{$ofertas->ubicacion}}" target="_blank">Encuentra el producto aqui.</a>
                         <hr>
                         <h5>Referencias</h5>
-                        <p>{{$oferta->referencias}}</p>
+                        <p>{{$ofertas->referencias}}</p>
                     </div>
                 </div>
             </div>

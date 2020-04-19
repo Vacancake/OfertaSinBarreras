@@ -1,5 +1,6 @@
 <?php
 
+use App\Oferta;
 use Illuminate\Database\Seeder;
 
 class OfertaSeeder extends Seeder
@@ -11,7 +12,7 @@ class OfertaSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('ofertas')->insert([
+        Note::create([
             'nombre' => 'Hamburguesa',
             'fecha_inicio' => new DateTime,
             'fecha_termino' => new DateTime,
@@ -22,7 +23,7 @@ class OfertaSeeder extends Seeder
             'imagen'=>'https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?cs=srgb&dl=sliced-pepperoni-pizza-on-white-ceramic-plate-708587.jpg&fm=jpg',
             'categoria_id'=>1,
             ]);
-        DB::table('ofertas')->insert([
+        Note::create([
             'nombre' => 'Mercedes-Benz',
             'fecha_inicio' => new DateTime,
             'fecha_termino' => new DateTime,
@@ -33,7 +34,7 @@ class OfertaSeeder extends Seeder
             'imagen'=>'https://www.mercedes-benz.com.mx/content/dam/mb-nafta/us/myco/my19/gla/class-page/non-amg/2018-GLA-SUV-CATEGORY-HERO-1-1-DR.jpg',
             'categoria_id'=>2,
             ]);
-        DB::table('ofertas')->insert([
+        Note::create([
             'nombre' => 'Futbol',
             'fecha_inicio' => new DateTime,
             'fecha_termino' => new DateTime,
@@ -44,7 +45,7 @@ class OfertaSeeder extends Seeder
             'imagen'=>'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/a0afa365-48b2-4ebb-afc3-c8c668cf6517/bal%C3%B3n-de-f%C3%BAtbol-chelsea-fc-skills-NpJM8h.jpg',
             'categoria_id'=>3,
             ]);
-        DB::table('ofertas')->insert([
+        Note::create([
             'nombre' => 'Television Samsung 4k',
             'fecha_inicio' => new DateTime,
             'fecha_termino' => new DateTime,
@@ -55,7 +56,7 @@ class OfertaSeeder extends Seeder
             'imagen'=>'https://images.samsung.com/is/image/samsung/latin-ru7300-un55ru7300pxpa-frontblack-155437909?$PD_GALLERY_L_JPG$',
             'categoria_id'=>4,
             ]);
-        DB::table('ofertas')->insert([
+        Note::create([
             'nombre' => 'Pañales Huggies UltraConfort etapa 6 niño 60 pzas',
             'fecha_inicio' => new DateTime,
             'fecha_termino' => new DateTime,
@@ -66,7 +67,7 @@ class OfertaSeeder extends Seeder
             'imagen'=>'https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:best/gr/images/product-images/img_large/00750194341712L.jpg',
             'categoria_id'=>5,
             ]);
-        DB::table('ofertas')->insert([
+        Note::create([
             'nombre' => 'Colchon Matrimonila ',
             'fecha_inicio' => new DateTime,
             'fecha_termino' => new DateTime,
@@ -77,7 +78,7 @@ class OfertaSeeder extends Seeder
             'imagen'=>'https://cdn1.coppel.com/images/catalog/pm/3535073-1.jpg',
             'categoria_id'=>6,
             ]);
-        DB::table('ofertas')->insert([
+        Note::create([
             'nombre' => 'Cortadora de cesped',
             'fecha_inicio' => new DateTime,
             'fecha_termino' => new DateTime,
@@ -88,7 +89,7 @@ class OfertaSeeder extends Seeder
             'imagen'=>'https://cdn1.coppel.com/images/catalog/pm/5504263-1.jpg',
             'categoria_id'=>7,
             ]);
-        DB::table('ofertas')->insert([
+        Note::create([
             'nombre' => 'tenis Ultraboost x Game Of Thrones',
             'fecha_inicio' => new DateTime,
             'fecha_termino' => new DateTime,
@@ -99,7 +100,7 @@ class OfertaSeeder extends Seeder
             'imagen'=>'https://cdn-images.farfetch-contents.com/14/04/22/43/14042243_18310432_1000.jpg',
             'categoria_id'=>8,
             ]);
-        DB::table('ofertas')->insert([
+        Note::create([
             'nombre' => 'ALL DAY LUMINOUS WEIGHTLESS LIQUID FOUNDATION',
             'fecha_inicio' => new DateTime,
             'fecha_termino' => new DateTime,
@@ -110,7 +111,7 @@ class OfertaSeeder extends Seeder
             'imagen'=>'https://sephora-mx-assets.s3.amazonaws.com/images/pictures/5965/closeup_2adfe1bcaee2a48e60cf814191d05d3668713f5d_1491429475_s1677970-main-Lhero.jpg',
             'categoria_id'=>9,
             ]);
-        DB::table('ofertas')->insert([
+        Note::create([
             'nombre' => 'Netflix',
             'fecha_inicio' => new DateTime,
             'fecha_termino' => new DateTime,
@@ -121,7 +122,7 @@ class OfertaSeeder extends Seeder
             'imagen'=>'https://tentulogo.com/wp-content/uploads/netflix.jpg',
             'categoria_id'=>10,
             ]);
-        DB::table('ofertas')->insert([
+        Note::create([
             'nombre' => 'Laptop HP 15-DY1751 Intel Core i5',
             'fecha_inicio' => new DateTime,
             'fecha_termino' => new DateTime,
@@ -132,7 +133,7 @@ class OfertaSeeder extends Seeder
             'imagen'=>'https://resources.sears.com.mx/medios-plazavip/fotos/productos_sears1/original/2951156.jpg',
             'categoria_id'=>11,
             ]);
-        DB::table('ofertas')->insert([
+        Note::create([
             'nombre' => 'London',
             'fecha_inicio' => new DateTime,
             'fecha_termino' => new DateTime,
@@ -143,7 +144,7 @@ class OfertaSeeder extends Seeder
             'imagen'=>'https://content-images.amlab7.com/airtrfx/ciudades/londres.jpg',
             'categoria_id'=>12,
             ]);
-        DB::table('ofertas')->insert([
+        Note::create([
             'nombre' => 'PlayStation',
             'fecha_inicio' => new DateTime,
             'fecha_termino' => new DateTime,

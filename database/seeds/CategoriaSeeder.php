@@ -1,5 +1,6 @@
 <?php
 
+use App\Categoria;
 use Illuminate\Database\Seeder;
 
 class CategoriaSeeder extends Seeder
@@ -11,43 +12,43 @@ class CategoriaSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('categorias')->insert([
+        Categoria::create([
             'nombre' => 'Abarrotes y Alimentos',
             ]);
-        DB::table('categorias')->insert([
+        Categoria::create([
             'nombre' => 'Autos y motos',
             ]);
-        DB::table('categorias')->insert([
+        Categoria::create([
             'nombre' => 'Deportes y ejercicio',
             ]);
-        DB::table('categorias')->insert([
+        Categoria::create([
             'nombre' => 'Entretenimiento y tiempo libre',
             ]);
-        DB::table('categorias')->insert([
+        Categoria::create([
             'nombre' => 'Familia, bebés y niños',
             ]);
-        DB::table('categorias')->insert([
+        Categoria::create([
             'nombre' => 'Hogar',
             ]);
-        DB::table('categorias')->insert([
+        Categoria::create([
             'nombre' => 'Jardín y hazlo tu mismo',
             ]);
-        DB::table('categorias')->insert([
+        Categoria::create([
             'nombre' => 'Ropa y Accesorios',
             ]);
-        DB::table('categorias')->insert([
+        Categoria::create([
             'nombre' => 'Salud y Belleza',
             ]);
-        DB::table('categorias')->insert([
+        Categoria::create([
             'nombre' => 'Servicios y suscripciones',
             ]);
-        DB::table('categorias')->insert([
+        Categoria::create([
             'nombre' => 'Tecnologia',
             ]);
-        DB::table('categorias')->insert([
+        Categoria::create([
             'nombre' => 'Viajes',
             ]);
-        DB::table('categorias')->insert([
+        Categoria::create([
             'nombre' => 'Videojuegos',
             ]);
     }

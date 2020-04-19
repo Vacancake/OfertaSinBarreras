@@ -28,6 +28,7 @@ class CreateOfertasTable extends Migration
             $table->string('imagen');
 
             $table->foreignId('categoria_id')->references('id')->on('ofertas');
+            //$table->foreignId('usuario_id')->references('id')->on('usuarios');
         });
     }
 

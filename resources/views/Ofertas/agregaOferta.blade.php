@@ -7,58 +7,54 @@
         <div class="col-md-8">
             <!-- <div class="card"> -->
             <h1 class="my-4">Captura de una oferta nueva</h1>
-                        <div class="form-group">
+                <form method="POST" action="{{url('ofertas')}}">
+                @csrf
                             <label for="nombre">Nombre</label>
-                            <input type="text" name ="nombre" value="" class="form-control" id="nombre" placeholder="Nombre del oferta">
-                        </div>
-                        <div class="form-group">
+                            <input type="text" name ="nombre" class="form-control" id="nombre" placeholder="Nombre del oferta">
+
                             <label for="fecha_inicio">Fecha Inicio</label>
-                            <input type="date" name="Fecha_Inicio" value="" class="form-control" id="finicio">
-                        </div>
-                        <div class="form-group">
+                            <input type="date" name="fecha_inicio" class="form-control" id="fecha_inicio">
+                       
                             <label for="fecha_termino">Fecha Término (opcional)*</label>
-                            <input type="date" name="Fecha_Termino" value="" class="form-control" id="ftermino">
-                        </div>
-                        <div class="form-group">
+                            <input type="date" name="fecha_termino" class="form-control" id="fecha_termino">
+                       
                             <label for="descripcion">Descripción</label>
-                            <textarea name="descripcion" value="" class="form-control" id="descripcion" rows="3" ></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="prioridad">Precio</label>
-                            <input type="number" name ="precio" value="" class="form-control" id="precio">
-                        </div>
-                        <div class="form-group">
+                            <textarea name="descripcion" class="form-control" id="descripcion" rows="3" ></textarea>
+                       
+                            <label for="precio">Precio</label>
+                            <input type="number" name ="precio" class="form-control" id="precio">
+                       
                             <label for="prioridad">Categoria</label>
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                            <select class="custom-select mr-sm-2" id="categoria_id" name="categoria_id">
                                 @foreach($categorias as $categoria)
                                 
-                                <option>{{$categoria->nombre}}</option>
+                                <option>{{$categoria->id}}</option>
 
                                 @endforeach
                             </select>
-                        </div>
+                      
 
-                        <div class="form-group">
                             <label for="precio">Ubicacion</label>
-                            <input type="url" name ="ubicacion" value="" class="form-control" id="ubicacion">
-                        </div>
+                            <input type="url" name ="ubicacion" class="form-control" id="ubicacion">
+                       
 
-                        <div class="form-group">
                             <label for="referencias">Referencias</label>
-                            <textarea name="referencias" value="" class="form-control" id="referencias" rows="3" ></textarea>
-                        </div>
+                            <textarea name="referencias" class="form-control" id="referencias" rows="3" ></textarea>
+                       
 
 
-                        <div class="form-group">
                             <label for="foto_oferta">Foto de la Oferta</label>
-                            <div class="custom-file">
+                            <!-- <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="customFileLang" lang="es">
                                 <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
-                            </div>
-                        </div>
+                            </div> -->
+
+                            <input type="text" name ="imagen" class="form-control" id="imagen" placeholder="Imagen de la oferta">
+                       
                         <p> 
-                            <a class="btn btn-warning btn-block" href="#"> Publicar</a>
+                            <button type="submit" class= "btn btn-warning btn-block"> Publicar</button>   
                         </p>
+                </form>
             <!-- </div> -->
         </div>
     </div>
