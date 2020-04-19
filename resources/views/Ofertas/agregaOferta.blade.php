@@ -30,11 +30,11 @@
                         <div class="form-group">
                             <label for="prioridad">Categoria</label>
                             <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option>Categoria 1</option>
-                                <option>Categoria 2</option>
-                                <option>Categoria 3</option>
-                                <option>Categoria 4</option>
-                                <option>Categoria 5</option>
+                                @foreach($categorias as $categoria)
+                                
+                                <option>{{$categoria->nombre}}</option>
+
+                                @endforeach
                             </select>
                         </div>
 
@@ -56,8 +56,9 @@
                                 <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
                             </div>
                         </div>
-
-                        <!-- <button type="submit" class="btn btn-primary">Crear</button> -->
+                        <p> 
+                            <a class="btn btn-warning btn-block" href="#"> Publicar</a>
+                        </p>
             <!-- </div> -->
         </div>
     </div>

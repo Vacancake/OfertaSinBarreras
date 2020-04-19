@@ -20,12 +20,12 @@ class CreateOfertasTable extends Migration
             $table->date('fecha_inicio');
             $table->date('fecha_termino');
 
-            $table->mediumText('descripcion');
-            $table->decimal('precio',5,2);
+            $table->longText('descripcion');
+            $table->double('precio',9,2);
             $table->string('ubicacion');
-            $table->string('referencias');
+            $table->mediumText('referencias');
 
-            //$table->string('imagen');
+            $table->string('imagen');
 
             $table->foreignId('categoria_id')->references('id')->on('ofertas');
         });

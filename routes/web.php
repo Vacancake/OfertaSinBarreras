@@ -14,15 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Ofertas.ofertas');
+    $ofertas = DB::table('ofertas')->get();
+    $categorias = DB::table('categorias')->get();
+
+    return view('Ofertas.ofertas', ['ofertas' => $ofertas, 'categorias' => $categorias]);
 })->name('oferta.index');
 
 Route::get('nueva',function() {//Oferta agregar 
-    return view('Ofertas.agregaOferta');
+    $categorias = DB::table('categorias')->get();
+
+
+    return view('Ofertas.agregaOferta', ['categorias' => $categorias]);
 })->name('oferta.create');
 
 Route::get('oferta_detalles/{id}', function($id) {//Oferta detalles
-    return view('Ofertas.mostrarOferta');
+    $oferta = DB::table('ofertas')
+    ->where('id',$id)
+    ->first();
+
+    return view('Ofertas.mostrarOferta', ['oferta' => $oferta]);
 })->name('oferta.show');
 
 Route::get('oferta/{id}/editar', function ($id) {//Oferta editar
