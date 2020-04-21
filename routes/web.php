@@ -24,7 +24,7 @@ Route::get('nueva','OfertaController@create')->name('oferta.create');           
 
 Route::get('oferta_detalles/{id}', 'OfertaController@show')->name('oferta.show');                      //Oferta detalles
 
-
+Route::get('categoria/{id}', 'CategoriaController@show')->name('categoria.show');
 /* Route::get('oferta/{id}/editar', function ($id) {                       //Oferta editar
     return 'Aquí podremos editar la oferta: '.$id;
 })->name('oferta.edit'); */
