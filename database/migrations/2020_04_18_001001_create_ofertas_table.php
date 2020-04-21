@@ -18,7 +18,7 @@ class CreateOfertasTable extends Migration
             $table->timestamps();
             $table->string('nombre');
             $table->date('fecha_inicio');
-            $table->date('fecha_termino');
+            $table->date('fecha_termino')->nullable();
 
             $table->longText('descripcion');
             $table->double('precio',9,2);

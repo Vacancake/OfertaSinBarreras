@@ -13,12 +13,12 @@ class CrearWishlistsTable extends Migration
      */
     public function up()
     {
-        Shchema::create('wishilst', function (Blueprint $table) {
+        Schema::create('wishilst', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
 
             //$table->foreignId('usuario_id')->references('id')->on('usuarios');
-        })
+        });
     }
 
     /**

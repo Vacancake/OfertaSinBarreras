@@ -70,7 +70,7 @@
             <h4 class="card-title">
               <a href="{{ route('oferta.show', $oferta->id)}}">{{$oferta -> nombre}}</a>
             </h4>
-            <h5>$ {{$oferta -> precio}}</h5>
+            <h5>$ {{number_format ($oferta->precio,2)}}</h5>
             <p class="card-text">Desde: {{$oferta -> fecha_inicio}}</p>
           </div>
         </div>

@@ -17,7 +17,7 @@
                 <h3>{{$ofertas->nombre}}</h3><hr>
                 <div class='informacion-oferta'>
                     <p>{{$ofertas->descripcion}}</p>
-                    <p>Precio: ${{$ofertas->precio}}</p>
+                    <p>Precio: ${{number_format ($ofertas->precio,2)}}</p>
                     
                     <p>     
                         <a class="btn btn-success" href="#"> Añadir a lista de deseos </a>

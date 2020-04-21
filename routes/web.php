@@ -41,7 +41,19 @@ Route::get('nueva',function() {                                         //Oferta
 })->name('oferta.create');
 
 Route::post('ofertas', function(Request $request) {                     //Oferta añadir
+    //return $request;
     
+    $request->validate([
+        'nombre' =>'required|max:255',
+        'fecha_inicio' =>'required|date|after:today',
+        'fecha_termino' => 'nullable|date|after:today',
+        'precio' =>'required',
+        'descripcion' =>'required',
+        'categoria_id' =>'required',
+        'ubicacion' =>'required|max:255',
+        'referencias' =>'required',
+        'imagen' =>'required||max:255',
+        ]);
     //return $request;
     Oferta::create([
         'nombre' => $request->input('nombre'),
