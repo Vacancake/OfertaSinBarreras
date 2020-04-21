@@ -77,3 +77,14 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Antes de comenzar
+    *Realiza un git clone del repositorio
+        - git clone https://github.com/PitaShani/OfertaSinBarreras.git
+    *Dentro de la carpeta del proyecto los siguientes comandos
+        - composer install
+        - cp .env.example .env
+        - php artisan key:generate
+    *Crear una base de datos
+    *Dentro del .env DB_DATABASE escribimos el nombre de la base de datos
+        - php artisan migrate:fresh --seed
