@@ -43,3 +43,6 @@ Route::get('usuario/{id}/editar', function ($id) {//Usuario editar
 Route::get('wishlist', function() {
     return view('Wishlist.wishlist');
 })->name('wishlist.show');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
