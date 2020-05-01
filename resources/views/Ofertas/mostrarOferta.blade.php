@@ -61,4 +61,7 @@
 
 </div>
 
+<!-- Footer -->
+@include('footer')
+
 @endsection

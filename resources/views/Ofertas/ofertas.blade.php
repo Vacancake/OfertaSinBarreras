@@ -91,4 +91,8 @@
 
 </div>
 <!-- /.container -->
+
+<!-- Footer -->
+@include('footer')
+
 @endsection

@@ -32,7 +32,7 @@ Route::get('categoria/{id}', 'CategoriaController@show')->name('categoria.show')
 
 Route::post('ofertas', 'OfertaController@store');                    //Oferta añadir
 
-Route::get('usuario_detalles/{id}',function($id) {//Usuario detalles
+Route::get('usuario_detalles',function() {//Usuario detalles
     return view('Usuarios.mostrarUsuario');
 })->name('usuario.show');
 
