@@ -19,7 +19,7 @@ use App\Http\Controllers;
 // ---------------------------RUTAS OFERTAS ---------------------------
 Route::get('/', 'OfertaController@index')->name('oferta.index');                                           //Oferta index
 
-Route::get('nueva','OfertaController@create')->name('oferta.create');                                         //Oferta form 
+Route::get('nueva','OfertaController@create')->name('oferta.create')->middleware('auth');                                         //Oferta form 
     
 
 Route::get('oferta_detalles/{id}', 'OfertaController@show')->name('oferta.show');                      //Oferta detalles
@@ -34,7 +34,7 @@ Route::post('ofertas', 'OfertaController@store');                    //Oferta a√
 
 Route::get('usuario_detalles',function() {//Usuario detalles
     return view('Usuarios.mostrarUsuario');
-})->name('usuario.show');
+})->name('usuario.show')->middleware('auth');
 
 Route::get('usuario/{id}/editar', function ($id) {//Usuario editar
     return 'Aqu√≠ podremos editar el usuario: '.$id;
