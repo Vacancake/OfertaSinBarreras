@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Carbon\Carbon;
 
 use App\Oferta;
 use App\Categoria;
@@ -11,9 +12,11 @@ class OfertaController extends Controller
 {
     public function index()
     {
-        $ofertas = Oferta::all();   //$ofertas = DB::table('ofertas')->get();
+        $date = Carbon::now();
+        $ofertas = Oferta::whereDate('fecha_termino', '>=', $date)->get();
         $categorias = Categoria::all();    //$categorias = DB::table('categorias')->get();
 
+       // return $ofertas;
         return view('Ofertas.ofertas', ['ofertas' => $ofertas, 'categorias' => $categorias]);
     }
 
@@ -36,7 +39,7 @@ class OfertaController extends Controller
     
         $request->validate([
             'nombre' =>'required|max:255',
-            'fecha_inicio' =>'required|date|after:today',
+            'fecha_inicio' =>'required|date|after:yesterday',
             'fecha_termino' => 'nullable|date|after:today',
             'precio' =>'required',
             'descripcion' =>'required',
