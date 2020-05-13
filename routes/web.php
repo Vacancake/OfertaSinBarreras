@@ -41,9 +41,15 @@ Route::get('usuario/{id}/editar', function ($id) {//Usuario editar
     return 'Aquí podremos editar el usuario: '.$id;
 })->name('usuario.edit');
 
-Route::get('wishlist', function() {
+/* Route::get('wishlist', function() {
     return view('Wishlist.wishlist');
-})->name('wishlist.show');
+})->name('wishlist.show'); */
+Route::get('wishlist', 'WishListController@index')->name('wishlist.show')->middleware('auth');
+
+Route::get('/whishlist/{id}', 'WishListController@add')->name('wishlist.add')->middleware('auth');
+
+
+
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');

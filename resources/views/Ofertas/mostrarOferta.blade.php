@@ -20,7 +20,7 @@
                     <p>Precio: ${{number_format ($ofertas->precio,2)}}</p>
                     
                     <p>     
-                        <a class="btn btn-success" href="#"> Añadir a lista de deseos </a>
+                        <a class="btn btn-success" href="{{route("wishlist.add", $ofertas->id)}}"> Añadir a lista de deseos </a>
                     </p>
                 </div>
             </div>

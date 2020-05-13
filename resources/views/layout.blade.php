@@ -29,9 +29,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('wishlist.show') }}">Lista de Deseos</a>
-          </li>
+          
 
           <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -47,7 +45,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    Opciones <span class="caret"></span>
                                 </a>
 
 
@@ -56,6 +54,8 @@
                                     
                                     
                                     <a class="dropdown-item" href="{{route('usuario.show')}}">Mi Perfil</a>
+
+                                    <a class="dropdown-item" href="{{ route('wishlist.show') }}">Lista de Deseos</a>
 
                                     <!-- <a class="dropdown-item" href="#">Something else here</a> -->
                                     
