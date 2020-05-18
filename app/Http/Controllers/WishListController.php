@@ -22,12 +22,19 @@ class WishListController extends Controller
             'attributes' => array(),
             'associatedModel' => $oferta
         ));
-        return view('Wishlist.wishlist');
+        return back();
     }
 
     public function index()
     {
         $cartItems = \Cart::session(auth()->id())->getContent();
         return view('Wishlist.wishlist', compact('cartItems'));
+    }
+
+    public function destroy($id)
+    {
+        \Cart::session(auth()->id())->remove($id);
+
+        return back();
     }
 }

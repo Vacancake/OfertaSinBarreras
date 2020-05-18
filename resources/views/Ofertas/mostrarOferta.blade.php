@@ -5,7 +5,7 @@
 <div class="row">
         <div class="col-md-6">
             <div class="container">
-                <div class="bloque-oferta"> <!--IMAGEN -->
+                <div class="card-img-top img-fluid"> <!--IMAGEN -->
                     <img src= {{$ofertas->imagen}} width="645">
                 </div>
             </div>

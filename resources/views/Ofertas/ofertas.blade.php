@@ -65,13 +65,18 @@
 
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="card h-100">
-          <a href="{{ route('oferta.show', $oferta->id)}}"><img class="card-img-top" src="{{$oferta->imagen}}" alt=""></a>
+          <div class="card-img">
+            <a href="{{ route('oferta.show', $oferta->id)}}"><img class="card-img-top" src="{{$oferta->imagen}}" alt="" height="187.42"></a>
+          </div>
           <div class="card-body">
             <h4 class="card-title">
               <a href="{{ route('oferta.show', $oferta->id)}}">{{$oferta -> nombre}}</a>
             </h4>
             <h5>$ {{number_format ($oferta->precio,2)}}</h5>
             <p class="card-text">Desde: {{$oferta -> fecha_inicio}}</p>
+          </div>
+          <div class="card-footer">
+            <a class="btn btn-light btn-block" href="{{route('wishlist.add', $oferta->id)}}"> Añadir a lista de deseos </a>
           </div>
         </div>
       </div>

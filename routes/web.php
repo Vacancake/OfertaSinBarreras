@@ -48,7 +48,7 @@ Route::get('wishlist', 'WishListController@index')->name('wishlist.show')->middl
 
 Route::get('/whishlist/{id}', 'WishListController@add')->name('wishlist.add')->middleware('auth');
 
-
+Route::get('/wishlist/destroy/{id}', 'WishListController@destroy')->name('wishlist.destroy')->middleware('auth');
 
 Auth::routes();
 
