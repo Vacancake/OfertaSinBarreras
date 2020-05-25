@@ -79,8 +79,13 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Para el profesor
-Nombre del proyeto: Oferta Sin Barreras
-Descripcion/Objetivo: El software es una página web donde podremos conocer las ofertas actuales en los distintos comercios que existen, las ofertas publicadas solo serán productos que sean encontrados en tiendas físicas, no se permitirán productos u ofertas en línea. Este software se acopla de manera adecuada para el uso en dispositivos móviles.
+## Nombre del proyeto: 
+
+Oferta Sin Barreras
+
+## Descripcion/Objetivo: 
+
+El software es una página web donde podremos conocer las ofertas actuales en los distintos comercios que existen, las ofertas publicadas solo serán productos que sean encontrados en tiendas físicas, no se permitirán productos u ofertas en línea. Este software se acopla de manera adecuada para el uso en dispositivos móviles.
 
 Algunas de las funciones que se pueden hacer en este software son las siguientes:
 
@@ -97,18 +102,20 @@ Algunas de las funciones que se pueden hacer en este software son las siguientes
 · Subir fotos para conocer las ofertas
 
 
-**[Integrantes:]** 	
+## Integrantes: 	
+
 Noel Mora y Nestor Almanza 
 
-Instrucciones de instalacion: 
+## Instrucciones de instalacion:
+
 **[Realiza un git clone del repositorio]**
-        - git clone https://github.com/NoelVela/OfertaSinBarreras.git
+· git clone https://github.com/NoelVela/OfertaSinBarreras.git
 **[Dentro de la carpeta del proyecto los siguientes comandos]**
-        - composer install
-        - cp .env.example .env
-        - php artisan key:generate
+· composer install
+· cp .env.example .env
+· php artisan key:generate
     **[Crear una base de datos]**
-        - Dentro del .env DB_DATABASE escribimos el nombre de la base de datos
-        - php artisan migrate:fresh --seed
+· Dentro del .env DB_DATABASE escribimos el nombre de la base de datos
+· php artisan migrate:fresh --seed
 
 		
