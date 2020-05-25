@@ -95,11 +95,12 @@ Algunas de las funciones que se pueden hacer en este software son las siguientes
 · Añadir una oferta en la lista de deseos.
 
 · Subir fotos para conocer las ofertas
-Integrantes: 	Noel Mora y Nestor Almanza 
+Integrantes: 	
+Noel Mora y Nestor Almanza 
 
 Instrucciones de instalacion: 
 *Realiza un git clone del repositorio
-        - git clone https://github.com/PitaShani/OfertaSinBarreras.git
+        - git clone https://github.com/NoelVela/OfertaSinBarreras.git
     *Dentro de la carpeta del proyecto los siguientes comandos
         - composer install
         - cp .env.example .env
