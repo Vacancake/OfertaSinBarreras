@@ -66,13 +66,13 @@
                             <label for="referencias">Referencias*</label>
                             <textarea name="referencias" class="form-control" id="referencias" rows="3" >{{old('referencias')}}</textarea>
 
-                            <label for="foto_oferta">Foto de la Oferta*</label>
-                            <!-- <div class="custom-file">
+                            <label for="foto_oferta">Foto de la Oferta*(En caso de no contar con la imagen ingresa el enlace de la misma)</label>
+                            <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="customFileLang" lang="es">
                                 <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
-                            </div> -->
+                            </div>
 
-                            <input type="text" name ="imagen" class="form-control" id="imagen" placeholder="Imagen de la oferta" value="{{old('imagen')}}"><br>
+                            <br><input type="text" name ="imagen" class="form-control" id="imagen" placeholder="Imagen de la oferta" value="{{old('imagen')}}"><br>
 
                         <p> 
                             <button type="submit" class= "btn btn-warning btn-block"> Publicar</button>   
@@ -82,5 +82,8 @@
         </div>
     </div>
 </div>
+
+<!-- Footer -->
+@include('footer')
 
 @endsection

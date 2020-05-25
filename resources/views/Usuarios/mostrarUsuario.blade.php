@@ -4,7 +4,7 @@
 
 <div class="container bootstrap snippet">
     <div class="row">
-  		<div class="col-sm-10"><h1>User name</h1></div>
+  		<div class="col-sm-10"><h1>{{ Auth::user()->name }}</h1></div>
     </div>
     <div class="row">
   		<div class="col-sm-3"><!--left col-->

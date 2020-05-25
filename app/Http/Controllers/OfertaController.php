@@ -12,8 +12,9 @@ class OfertaController extends Controller
 {
     public function index()
     {
-        $date = Carbon::now();
-        $ofertas = Oferta::whereDate('fecha_termino', '>=', $date)->get();
+        //$date = Carbon::now();
+        //$ofertas = Oferta::whereDate('fecha_termino', '>=', $date)->get();
+        $ofertas = Oferta::all();
         $categorias = Categoria::all();    //$categorias = DB::table('categorias')->get();
 
        // return $ofertas;

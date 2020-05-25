@@ -39,7 +39,7 @@
                   <tr>
                     <th scope="row" class="border-0">
                       <div class="p-2">
-                        <img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-1_zrifhn.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
+                        <!-- <img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-1_zrifhn.jpg" alt="" width="70" class="img-fluid rounded shadow-sm"> -->
                         <div class="ml-3 d-inline-block align-middle">
                           <h5 class="mb-0"> <a href="{{ route('oferta.show', $item->id)}}" class="text-dark d-inline-block align-middle">{{$item->name}}</a>
                         </div>
@@ -61,7 +61,5 @@
   </div>
 </div>
 
-<!-- Footer -->
-@include('footer')
 
 @endsection

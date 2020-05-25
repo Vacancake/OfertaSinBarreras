@@ -76,7 +76,8 @@
             <p class="card-text">Desde: {{$oferta -> fecha_inicio}}</p>
           </div>
           <div class="card-footer">
-            <a class="btn btn-light btn-block" href="{{route('wishlist.add', $oferta->id)}}"> Añadir a lista de deseos </a>
+            <a class="btn btn-primary btn-block" href="{{route('wishlist.add', $oferta->id)}}"> Añadir a lista de deseos </a>
+            <a class="btn btn-danger btn-block"> Reportar </a>
           </div>
         </div>
       </div>
