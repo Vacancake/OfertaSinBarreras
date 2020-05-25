@@ -95,18 +95,20 @@ Algunas de las funciones que se pueden hacer en este software son las siguientes
 · Añadir una oferta en la lista de deseos.
 
 · Subir fotos para conocer las ofertas
-Integrantes: 	
+
+
+**[Integrantes:]** 	
 Noel Mora y Nestor Almanza 
 
 Instrucciones de instalacion: 
-*Realiza un git clone del repositorio
+**[Realiza un git clone del repositorio]**
         - git clone https://github.com/NoelVela/OfertaSinBarreras.git
-    *Dentro de la carpeta del proyecto los siguientes comandos
+**[Dentro de la carpeta del proyecto los siguientes comandos]**
         - composer install
         - cp .env.example .env
         - php artisan key:generate
-    *Crear una base de datos
-    *Dentro del .env DB_DATABASE escribimos el nombre de la base de datos
+    **[Crear una base de datos]**
+        - Dentro del .env DB_DATABASE escribimos el nombre de la base de datos
         - php artisan migrate:fresh --seed
 
 		
